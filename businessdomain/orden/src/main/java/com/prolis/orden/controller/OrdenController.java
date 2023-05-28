@@ -17,6 +17,12 @@ public class OrdenController {
         return ordenService.save(orden);
     }
 
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> deleteOrden(@PathVariable("id") Integer id){
+        ordenService.deleteOrden(id);
+        return new ResponseEntity<>("Delete correctly", HttpStatus.OK);
+    }
+
     @GetMapping("/getAll")
     public ResponseEntity<?> getAll() {
         return new ResponseEntity<>(ordenService.getAll(), HttpStatus.OK);

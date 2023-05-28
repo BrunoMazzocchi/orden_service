@@ -19,4 +19,9 @@ public class OrdenService {
     public Optional<List<Orden>> getAll() {
         return Optional.of(ordenRepository.findAll());
     }
+
+   public void deleteOrden(Integer id) {
+            ordenRepository.deleteById(id);
+        }
+
 }
