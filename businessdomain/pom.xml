@@ -97,5 +97,6 @@
         <module>paciente</module>
         <module>empleado</module>
         <module>tiposervicio</module>
+        <module>tipoorden</module>
     </modules>
 </project>
