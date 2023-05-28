@@ -8,10 +8,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>usuarioimprime</artifactId>
+    <artifactId>orden</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>usuarioimprime</name>
-    <description>usuarioimprime</description>
+    <name>orden</name>
+    <description>orden</description>
 
     <build>
         <plugins>
