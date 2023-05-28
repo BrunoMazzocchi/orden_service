@@ -23,5 +23,8 @@ public class OrdenService {
    public void deleteOrden(Integer id) {
             ordenRepository.deleteById(id);
         }
+        public  void updateOrden(Orden orden){
+            ordenRepository.save(orden);
+        }
 
 }

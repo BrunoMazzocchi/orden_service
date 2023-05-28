@@ -23,6 +23,12 @@ public class OrdenController {
         return new ResponseEntity<>("Delete correctly", HttpStatus.OK);
     }
 
+    @PostMapping("/update/{id}")
+    public ResponseEntity<String> updateOrden(@PathVariable("id") Integer id, @RequestBody Orden orden){
+        ordenService.updateOrden(orden);
+        return new ResponseEntity<>("Update correctly", HttpStatus.OK);
+    }
+
     @GetMapping("/getAll")
     public ResponseEntity<?> getAll() {
         return new ResponseEntity<>(ordenService.getAll(), HttpStatus.OK);
