@@ -94,7 +94,8 @@
     </dependencies>
 
     <modules>
-
+        <module>paciente</module>
         <module>empleado</module>
+        <module>tiposervicio</module>
     </modules>
 </project>
