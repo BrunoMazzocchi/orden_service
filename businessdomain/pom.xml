@@ -98,5 +98,6 @@
         <module>empleado</module>
         <module>tiposervicio</module>
         <module>tipoorden</module>
+        <module>usuarioimprime</module>
     </modules>
 </project>
