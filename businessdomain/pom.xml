@@ -82,10 +82,7 @@
             <version>4.8.1</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>
@@ -99,5 +96,6 @@
         <module>tiposervicio</module>
         <module>tipoorden</module>
         <module>usuarioimprime</module>
+        <module>orden</module>
     </modules>
 </project>

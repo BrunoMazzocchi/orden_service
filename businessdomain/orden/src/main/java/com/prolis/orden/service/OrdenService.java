@@ -20,11 +20,12 @@ public class OrdenService {
         return Optional.of(ordenRepository.findAll());
     }
 
-   public void deleteOrden(Integer id) {
-            ordenRepository.deleteById(id);
-        }
-        public  void updateOrden(Orden orden){
-            ordenRepository.save(orden);
-        }
+    public void deleteOrden(Integer id) {
+        ordenRepository.deleteById(id);
+    }
+
+    public void updateOrden(Orden orden) {
+        ordenRepository.save(orden);
+    }
 
 }

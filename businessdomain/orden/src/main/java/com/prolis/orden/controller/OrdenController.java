@@ -13,8 +13,9 @@ public class OrdenController {
     private OrdenService ordenService;
 
     @PostMapping("/save")
-    public Orden save(@RequestBody Orden orden) {
-        return ordenService.save(orden);
+    public ResponseEntity<String> saveOrden(@RequestBody Orden orden){
+        ordenService.save(orden);
+        return new ResponseEntity<>("Save correctly", HttpStatus.OK);
     }
 
     @DeleteMapping("{id}")
@@ -31,6 +32,10 @@ public class OrdenController {
 
     @GetMapping("/getAll")
     public ResponseEntity<?> getAll() {
-        return new ResponseEntity<>(ordenService.getAll(), HttpStatus.OK);
+        // If ordenes found return 200 else 404
+        return ordenService.getAll()
+                .map(ordenes -> new ResponseEntity<>(ordenes, HttpStatus.OK))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+
     }
 }

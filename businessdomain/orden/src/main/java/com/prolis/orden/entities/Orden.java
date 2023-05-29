@@ -11,7 +11,7 @@ import java.util.Date;
 public class Orden {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idorden",  nullable = false, unique = true)
+    @Column(name = "idorden" , nullable = false, unique = true)
     private int idOrden;
 
     @Column(name = "N_Orden", length = 11)
