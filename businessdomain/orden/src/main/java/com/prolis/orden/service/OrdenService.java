@@ -34,4 +34,9 @@ public class OrdenService {
         ordenRepository.save(orden);
     }
 
+    public Orden getOrdenById(Integer id) {
+        Optional<Orden> optionalOrden = ordenRepository.findById(id);
+        return optionalOrden.orElse(null);
+    }
+
 }

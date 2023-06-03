@@ -38,4 +38,16 @@ public class OrdenController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
 
     }
+
+
+    @GetMapping("/Orden/{id}")
+    public ResponseEntity<Orden> getDato(@PathVariable("id") Integer id) {
+        Orden dato = ordenService.getOrdenById(id);
+
+        if (dato == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        return new ResponseEntity<>(dato, HttpStatus.OK);
+    }
 }
