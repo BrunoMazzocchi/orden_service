@@ -18,7 +18,7 @@ public class OrdenController {
         return new ResponseEntity<>("Save correctly", HttpStatus.OK);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("delete/{id}")
     public ResponseEntity<String> deleteOrden(@PathVariable("id") Integer id){
         ordenService.deleteOrden(id);
         return new ResponseEntity<>("Delete correctly", HttpStatus.OK);

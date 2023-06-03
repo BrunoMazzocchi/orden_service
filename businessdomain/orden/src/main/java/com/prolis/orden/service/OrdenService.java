@@ -21,7 +21,13 @@ public class OrdenService {
     }
 
     public void deleteOrden(Integer id) {
-        ordenRepository.deleteById(id);
+        Optional<Orden> optionalOrden = ordenRepository.findById(id);
+
+        if (optionalOrden.isPresent()) {
+            Orden orden = optionalOrden.get();
+            orden.setEstado(3); // Cambia el valor del estado a 3 (eliminado)
+            ordenRepository.save(orden); // Guardar los cambios en la base de datos
+        }
     }
 
     public void updateOrden(Orden orden) {
