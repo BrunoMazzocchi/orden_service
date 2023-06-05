@@ -14,18 +14,21 @@ public class OrdenController {
 
     @PostMapping("/save")
     public ResponseEntity<String> saveDato(@RequestBody Orden orden) {
-        ordenService.saveOrden(orden);
-        return new ResponseEntity<>("Dato guardado correctamente", HttpStatus.CREATED);
+        Orden newOrden = ordenService.saveOrden(orden);
+        String response = "Dato guardado correctamente ID: " + newOrden.getIdOrden();
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
     @DeleteMapping("delete/{id}")
     public ResponseEntity<String> deleteOrden(@PathVariable("id") Integer id){
+        // Delete the given orden
         ordenService.deleteOrden(id);
         return new ResponseEntity<>("Delete correctly", HttpStatus.OK);
     }
 
     @PostMapping("/update/{id}")
     public ResponseEntity<String> updateOrden(@PathVariable("id") Integer id, @RequestBody Orden orden){
+        // Update the given orden
         ordenService.updateOrden(orden);
         return new ResponseEntity<>("Update correctly", HttpStatus.OK);
     }
@@ -42,12 +45,14 @@ public class OrdenController {
 
     @GetMapping("/Orden/{id}")
     public ResponseEntity<Orden> getDato(@PathVariable("id") Integer id) {
-        Orden dato = ordenService.getOrdenById(id);
+        // Get orden by id
+        Orden orden = ordenService.getOrdenById(id);
 
-        if (dato == null) {
+        // If orden not found return 404 else 200
+        if (orden == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
-        return new ResponseEntity<>(dato, HttpStatus.OK);
+        return new ResponseEntity<>(orden, HttpStatus.OK);
     }
 }
