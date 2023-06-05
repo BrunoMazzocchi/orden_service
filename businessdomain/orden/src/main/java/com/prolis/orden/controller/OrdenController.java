@@ -5,7 +5,7 @@ import com.prolis.orden.service.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin(origins = {"http://localhost:4200"}, exposedHeaders = {"Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"})
 @RestController
 @RequestMapping("/orden")
 public class OrdenController {
@@ -13,9 +13,9 @@ public class OrdenController {
     private OrdenService ordenService;
 
     @PostMapping("/save")
-    public ResponseEntity<String> saveOrden(@RequestBody Orden orden){
-        ordenService.save(orden);
-        return new ResponseEntity<>("Save correctly", HttpStatus.OK);
+    public ResponseEntity<String> saveDato(@RequestBody Orden orden) {
+        ordenService.saveOrden(orden);
+        return new ResponseEntity<>("Dato guardado correctamente", HttpStatus.CREATED);
     }
 
     @DeleteMapping("delete/{id}")

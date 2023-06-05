@@ -8,9 +8,6 @@ import java.util.*;
 
 @Repository
 public interface OrdenRepository extends JpaRepository<Orden, Integer> {
-
-
     Orden save (Orden orden);
-
     List<Orden> findAll();
 }

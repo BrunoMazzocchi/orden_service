@@ -12,7 +12,7 @@ public class OrdenService {
     @Autowired
     private OrdenRepository ordenRepository;
 
-    public Orden save(Orden orden) {
+    public Orden saveOrden(Orden orden) {
         return ordenRepository.save(orden);
     }
 
