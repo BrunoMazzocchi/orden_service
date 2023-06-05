@@ -9,6 +9,8 @@ import java.util.Date;
 @Data
 @Table(name = "tbl_empleado")
 public class Empleado {
+    public Empleado() {
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idempleado", nullable = false, unique = true)

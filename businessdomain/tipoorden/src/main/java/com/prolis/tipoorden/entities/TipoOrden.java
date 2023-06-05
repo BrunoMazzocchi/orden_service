@@ -12,7 +12,9 @@ public class TipoOrden {
     }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idtipoorden", nullable = false, unique = true)
     private int idTipoOrden;
 
+    @Column(name = "descripcion", length = 15, nullable = false, unique = true)
     private String descripcion;
 }

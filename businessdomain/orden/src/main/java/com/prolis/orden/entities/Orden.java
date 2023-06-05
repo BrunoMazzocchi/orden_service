@@ -9,6 +9,8 @@ import java.util.Date;
 @Data
 @Table(name = "tbl_ordenes")
 public class Orden {
+    public Orden() {
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idorden" , nullable = false, unique = true)
