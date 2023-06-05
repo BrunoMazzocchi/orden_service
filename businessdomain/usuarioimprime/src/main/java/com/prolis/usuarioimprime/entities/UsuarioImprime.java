@@ -11,39 +11,39 @@ import java.util.Date;
 public class UsuarioImprime {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IdUsuario")
+    @Column(name = "idusuario", nullable = false, unique = true)
     private int idUsuario;
 
-    @Column(name = "IdEmpleado")
+    @Column(name = "idempleado", nullable = false, unique = true)
     private int idEmpleado;
 
-    @Column(name = "Login", length = 15)
+    @Column(name = "login", length = 15, nullable = false, unique = true)
     private String login;
 
-    @Column(name = "Pwd", length = 20)
+    @Column(name = "pwd", length = 20, nullable = false, unique = true)
     private String password;
 
-    @Column(name = "Activo", length = 1)
+    @Column(name = "activo", length = 1, nullable = false, unique = true)
     private String activo;
 
-    @Column(name = "Estado")
+    @Column(name = "estado", nullable = false, unique = true)
     private int estado;
 
-    @Column(name = "IdUsuarioCreacion")
+    @Column(name = "idusuariocreacion", nullable = false, unique = true)
     private int idUsuarioCreacion;
 
-    @Column(name = "IdUsuarioModificacion")
+    @Column(name = "idusuariomodificacion", nullable = false, unique = true)
     private int idUsuarioModificacion;
 
-    @Column(name = "IdUsuarioEliminacion")
+    @Column(name = "idusuarioeliminacion", nullable = false, unique = true)
     private int idUsuarioEliminacion;
 
-    @Column(name = "FechaCreacion")
+    @Column(name = "fechacreacion", nullable = false, unique = true)
     private Date fechaCreacion;
 
-    @Column(name = "FechaModificacion")
+    @Column(name = "fechamodificacion", nullable = false, unique = true)
     private Date fechaModificacion;
 
-    @Column(name = "FechaEliminacion")
+    @Column(name = "fechaeliminacion", nullable = false, unique = true)
     private Date fechaEliminacion;
 }

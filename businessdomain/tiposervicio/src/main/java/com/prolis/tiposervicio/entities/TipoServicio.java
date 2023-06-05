@@ -10,7 +10,9 @@ public class TipoServicio {
     /// Creates a new instance of TipoServicio
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idtiposervicio", nullable = false, unique = true)
     private int idTipoServicio;
 
+    @Column(name = "descripcion", length = 50, nullable = false, unique = true)
     private String descripcion;
 }
