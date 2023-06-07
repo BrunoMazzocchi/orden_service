@@ -1,4 +1,4 @@
-package com.businessdomain.ordendetalle;
+package com.prolis.ordendetalle;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

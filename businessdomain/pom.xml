@@ -97,5 +97,7 @@
         <module>tipoorden</module>
         <module>usuarioimprime</module>
         <module>orden</module>
+        <module>examen</module>
+        <module>ordendetalle</module>
     </modules>
 </project>
